@@ -1,12 +1,7 @@
-file = ''
-f = open(file)
-end = open(file.split('.')[0]+'.html','w')
-end.write('<html>\n  <head>\n    <body>')
 dent = '\n      '
-class App():
-	def __init__(self,name):
-		global file
-		file = name
+end = open('app.html','w')
+end.write('<html>\n  <head>\n    <body>')
+end.write('<link rel="stylesheet" href="style.css" type="text/css">')
 class Section():
     def __init__(self,_class):
         end.write(dent+'<div class="'+_class+'">')
@@ -19,7 +14,5 @@ class Section():
         end.write(self.dent+'<p class="'+_class+'">'+text+'</p>')
     def pack(self):
         end.write(dent+'</div>')
-def style(_file):
-    end.write(dent+'<link rel="stylesheet" href="'+_file+'" type="text/css">')
 def finnish():
     end.write('\n    </body>\n  </head>\n</html>')

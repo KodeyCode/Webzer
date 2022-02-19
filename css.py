@@ -1,8 +1,4 @@
-file = ''
-f = open(file)
-end = open(file.split('.')[0]+'.css','w')
-class Style():
-    def __init__(self,name):file = name
+end = open('style.css','w')
 class Class:
     def __init__(self,name):
         self.name = name
